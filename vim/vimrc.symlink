@@ -21,6 +21,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'junegunn/vim-easy-align'
 
 call vundle#end()
 
@@ -127,14 +128,23 @@ let g:ctrlp_cmd = 'CtrlP'
 "   just, everyone knows, However, So, easy
 
 "   http://css-tricks.com/words-avoid-educational-writing/
-highlight TechWordsToAvoid ctermbg=red ctermfg=white
-function MatchTechWordsToAvoid()
-  match TechWordsToAvoid /\c\<\(obviously\|basicallylly\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy\)\>/
-endfunction
-autocmd FileType markdown call MatchTechWordsToAvoid()
-autocmd BufWinEnter *.md call MatchTechWordsToAvoid()
-autocmd InsertEnter *.md call MatchTechWordsToAvoid()
-autocmd InsertLeave *.md call MatchTechWordsToAvoid()
-autocmd BufWinLeave *.md call clearmatches()
+" highlight TechWordsToAvoid ctermbg=red ctermfg=white
+" function MatchTechWordsToAvoid()
+"   match TechWordsToAvoid /\c\<\(obviously\|basicallylly\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy\)\>/
+" endfunction
+" autocmd FileType markdown call MatchTechWordsToAvoid()
+" autocmd BufWinEnter *.md call MatchTechWordsToAvoid()
+" autocmd InsertEnter *.md call MatchTechWordsToAvoid()
+" autocmd InsertLeave *.md call MatchTechWordsToAvoid()
+" autocmd BufWinLeave *.md call clearmatches()
 
 runtime macros/matchit.vim
+
+" Align GitHub-Flavored Markdown Tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
