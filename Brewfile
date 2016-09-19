@@ -20,6 +20,7 @@ brew 'spaceman-diff'
 brew 'spark'
 brew 'unrar'
 brew 'wget'
+brew 'go-delve/delve/delve'
 
 cask 'iterm2'
 cask 'firefox'
