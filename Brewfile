@@ -21,6 +21,7 @@ brew 'spark'
 brew 'unrar'
 brew 'wget'
 brew 'docker'
+brew 'go-delve/delve/delve'
 
 cask 'iterm2'
 cask 'firefox'
