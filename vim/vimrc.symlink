@@ -45,6 +45,7 @@ set scrolloff=8
 set directory=~/.backup
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 set expandtab
 set autoindent
 set smartindent
@@ -103,9 +104,6 @@ nmap <C-k> lbi:<Esc>E
 
 map <C-w> <esc>:w<CR>
 imap <C-w> <esc>:w<CR>
-
-map <C-w> <esc>:W<CR>
-imap <C-w> <esc>:W<CR>
 
 nmap <F8> :TagbarToggle<CR>
 noremap <silent> <C-S>          :update<CR>
