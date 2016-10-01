@@ -22,6 +22,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
