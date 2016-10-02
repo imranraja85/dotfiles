@@ -33,9 +33,9 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
-
+" write the contents of the file if :make is called
+set autowrite
 set nu
-
 set wildmenu
 set hlsearch
 set ignorecase
@@ -75,7 +75,7 @@ map <Leader>vm :EVmodel
 map <Leader>u :Eunittest 
 map <Leader>su :ESunittest 
 map <Leader>vu :EVunittest 
-map <Leader>c :Econtroller 
+" map <Leader>c :Econtroller 
 map <Leader>sc :EScontroller 
 map <Leader>vc :EVcontroller 
 map <Leader>v :Eview 
@@ -147,3 +147,12 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Go Shortcuts
+" Heavily influenced by: https://github.com/fatih/vim-go-tutorial#quick-setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
