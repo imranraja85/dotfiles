@@ -39,3 +39,5 @@ do
 done
 
 unset config_files
+
+skip_global_compinit=1
