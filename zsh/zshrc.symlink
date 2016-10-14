@@ -41,3 +41,4 @@ done
 unset config_files
 
 source ~/.bash_profile
+skip_global_compinit=1

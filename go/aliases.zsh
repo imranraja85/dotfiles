@@ -3,3 +3,6 @@
 go_run() {
   $(go build && ./$1)
 }
+
+# take me to my go work directory
+alias gp="cd ~/box/go/src/github.com/imranraja85"
