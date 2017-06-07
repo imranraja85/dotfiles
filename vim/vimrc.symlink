@@ -12,6 +12,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-dispatch'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
@@ -24,6 +25,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'fatih/vim-go'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 
@@ -138,3 +140,5 @@ autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 " This may be slow on large code bases
 let g:go_fmt_command = "goimports"
 let g:SuperTabDefaultCompletionType = "context"
+
+au BufRead,BufNewFile *.ts   setfiletype typescript

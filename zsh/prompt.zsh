@@ -46,17 +46,16 @@ need_push () {
   fi
 }
 
-# this is very slow on my work laptop for some reason
 ruby_version() {
-  #if (( $+commands[rbenv] ))
-  #then
-  #  echo "$(rbenv version | awk '{print $1}')"
-  #fi
+  if (( $+commands[rbenv] ))
+  then
+    echo "$(rbenv version | awk '{print $1}')"
+  fi
 
-  #if (( $+commands[rvm-prompt] ))
-  #then
-  #  echo "$(rvm-prompt | awk '{print $1}')"
-  #fi
+  if (( $+commands[rvm-prompt] ))
+  then
+    echo "$(rvm-prompt | awk '{print $1}')"
+  fi
 }
 
 rb_prompt() {
