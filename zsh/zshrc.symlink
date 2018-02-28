@@ -4,6 +4,8 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/box
 
+plugins=(ssh-agent)
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -40,5 +42,4 @@ done
 
 unset config_files
 
-source ~/.bash_profile
-skip_global_compinit=1
+export PATH=./bin:/usr/local/bin:/usr/local/sbin:/home/iraja/.dotfiles/bin:/home/iraja/.dotfiles/docker:./bin:/usr/local/bin:/usr/local/sbin:/home/iraja/.dotfiles/bin:/home/iraja/.dotfiles/docker:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/bin/
